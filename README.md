@@ -2,7 +2,7 @@
 July 7th, 2020
 
 ### Project Title
-Bikeshare
+Bikeshare Project
 
 ### Description
 Calculates statistics where a user chooses the data between New York, Chicago, and Washington, then is provided filter options for the dataset for analysis.
