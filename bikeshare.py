@@ -119,6 +119,18 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def conv_time(seconds):
+    """Converts seconds into Days, Hours, Minutes, and Seconds"""
+
+    time = float(seconds)
+    day = time // (24 * 3600)
+    time = time % (24 * 3600)
+    hour = time // 3600
+    time %= 3600
+    minutes = time // 60
+    time %= 60
+    seconds = time
+    return("{} days, {} hours, {} minutes, and {} seconds".format(day,hour,minutes,seconds))
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -127,14 +139,15 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     total_time = df['Trip Duration'].sum()
-    print("The total time traveled was: {} seconds".format(total_time))
+    total_time = conv_time(total_time)
+    print("The total time traveled was: {}".format(total_time))
 
     average_time = df['Trip Duration'].mean()
-    print("The average time traveled was: {} seconds".format(average_time))
+    average_time = conv_time(average_time)
+    print("The average time traveled was: {}".format(average_time))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
