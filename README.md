@@ -5,12 +5,12 @@ July 7th, 2020
 Bikeshare Project
 
 ### Description
-Calculates statistics where a user chooses the data between New York, Chicago, and Washington, then is provided filter options for the dataset for analysis.
+Calculates statistics where a user chooses the data between **New York, Chicago,** and **Washington**, then is provided filter options for the dataset for analysis.
 
 ### Files used
-bikeshare.py
-chicago.csv
-new_york_city.csv
+bikeshare.py\
+chicago.csv\
+new_york_city.csv\
 washington.csv
 
 ### Credits
